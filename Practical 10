@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frames & Iframe Demo</title>
+
+<style>
+body{margin:0;font-family:Arial}
+
+/* Header */
+header{background:#222;color:#fff;text-align:center;padding:10px}
+
+/* Layout */
+.container{display:flex;height:90vh}
+
+/* Sidebar */
+nav{width:25%;background:#f4f4f4;padding:10px}
+nav a{
+  display:block;
+  padding:10px;
+  margin:5px 0;
+  text-decoration:none;
+  color:#000;
+  background:#ddd;
+}
+nav a:hover{background:#bbb}
+
+/* Iframe */
+iframe{width:75%;border:none}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>HTML Iframe - Maps & External Pages</h2>
+</header>
+
+<div class="container">
+
+<!-- Navigation Links -->
+<nav>
+<a href="https://www.wikipedia.org" target="frame">Wikipedia</a>
+<a href="https://www.example.com" target="frame">Example Site</a>
+<a href="https://maps.google.com/maps?q=Nagpur&output=embed" target="frame">
+Google Map (Nagpur)
+</a>
+<a href="https://maps.google.com/maps?q=Delhi&output=embed" target="frame">
+Google Map (Delhi)
+</a>
+</nav>
+
+<!-- Iframe Display -->
+<iframe name="frame" src="https://maps.google.com/maps?q=India&output=embed"></iframe>
+
+</div>
+
+</body>
+</html>
