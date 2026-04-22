@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive CSS3 Page</title>
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{margin:0;font-family:Montserrat;background:#f0f0f0}
+
+/* Header */
+header{background:#0077ff;color:#fff;text-align:center;padding:15px;animation:fade 2s}
+
+/* Navigation */
+nav{text-align:center;background:#333}
+nav a{color:#fff;padding:10px;display:inline-block;text-decoration:none}
+nav a:hover{background:#0077ff;transform:scale(1.1)}
+
+/* Multi Columns */
+.cols{column-count:3;padding:15px}
+.cols p{background:#fff;margin:5px;padding:10px;border-radius:5px}
+
+/* Cards with Icons */
+.cards{display:flex;justify-content:center;flex-wrap:wrap}
+.card{background:#fff;margin:10px;padding:15px;width:200px;text-align:center;transition:.3s}
+.card i{font-size:35px;color:#0077ff}
+.card:hover{transform:scale(1.1) rotate(2deg)}
+
+/* Animation */
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+/* Responsive */
+@media(max-width:768px){.cols{column-count:2}}
+@media(max-width:500px){
+.cols{column-count:1}
+.card{width:90%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Responsive Webpage</h2>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="cols">
+<p>Content 1</p>
+<p>Content 2</p>
+<p>Content 3</p>
+<p>Content 4</p>
+</div>
+
+<div class="cards">
+<div class="card"><i class="fas fa-laptop"></i><p>Web</p></div>
+<div class="card"><i class="fas fa-mobile-alt"></i><p>Mobile</p></div>
+<div class="card"><i class="fas fa-rocket"></i><p>Speed</p></div>
+</div>
+
+</body>
+</html>
